@@ -7,4 +7,8 @@ const student = {
     class: 12,
 };
 
-getProperties(student) // ["id", "name", "class"]
+function getProperties(obj) {
+    console.log(Object.keys(obj));
+}
+
+getProperties(student); // ["id", "name", "class"]
