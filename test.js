@@ -151,3 +151,27 @@
 //     .print() // [1, 2, 9]
 //     .update(1, 3)
 //     .print(); // [1, 3, 9]
+
+
+function Car(speed, brand) {
+    this.speed = speed;
+    this.brand = brand;
+    
+    this.accelerate = function (a) {
+        let test = this.speed;
+        return a + test;
+    }
+
+    this.brake = function () {
+        return this.speed - 1;
+    }
+    
+    this.status = function () {
+        return this.brand + " running at " + this.speed + " km/h";
+    };
+}
+
+let car = new Car(0, "Lada");
+
+car.accelerate(20);
+console.log(car.status());
