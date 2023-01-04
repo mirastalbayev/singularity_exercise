@@ -153,25 +153,96 @@
 //     .print(); // [1, 3, 9]
 
 
-function Car(speed, brand) {
-    this.speed = speed;
-    this.brand = brand;
+// function Car(speed, brand) {
+//     this.speed = speed;
+//     this.brand = brand;
     
-    this.accelerate = function (a) {
-        let test = this.speed;
-        return a + test;
-    }
+//     this.accelerate = function (a) {
+//         let test = this.speed;
+//         return a + test;
+//     }
 
-    this.brake = function () {
-        return this.speed - 1;
-    }
+//     this.brake = function () {
+//         return this.speed - 1;
+//     }
     
-    this.status = function () {
-        return this.brand + " running at " + this.speed + " km/h";
-    };
+//     this.status = function () {
+//         return this.brand + " running at " + this.speed + " km/h";
+//     };
+// }
+
+// let car = new Car(0, "Lada");
+
+// car.accelerate(20);
+// console.log(car.status());
+
+// function fetchPokemon(name) {
+//     return fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+// }
+
+// async function getPokemon() {
+//     try {
+//         const promisePickachu = fetchPokemon("pikachu");
+//         const promiseCharmander = fetchPokemon("charmander");
+        
+//         const resPickachu = await promisePickachu;
+//         const resCharmander = await promiseCharmander;
+    
+//         // const [resPickachu, resCharmander] = await Promise.all([
+//         //     fetchPokemon("pikachu"),
+//         //     fetchPokemon("charmander")
+//         // ]);
+    
+//         // const jsonPickachu = await resPickachu.json();
+//         // const jsonCharmander = await resCharmander.json();
+    
+//         // console.log("jsonPickachu", jsonPickachu);
+//         // console.log("jsonChermander", jsonCharmander);
+//     } catch (e) {
+//         console.error("err", e);
+//     }
+// }
+
+// getPokemon();
+
+// promise
+//     .then((mes) => {
+//         console.log("mes", mes);
+//         return mes - 1;
+//     })
+//     .then((mes2) => {
+//         console.log("mes2", mes2);
+//         return mes2 - 1;
+//     })
+//     .finally(() => {
+//         console.log("Finally!");
+//     })
+//     .catch((err) => {
+//         console.log("err1", err);
+//         return Promise.reject(new Error("from catch1"));
+//     })
+//     .catch((err2) => {
+//         console.log("err2", err2);
+//         return 0;
+//     })
+//     .then((mes3) => {
+//         console.log("mes3", mes3);
+//     });
+
+// async function callAsync() {
+
+// }
+
+// callAsync()
+
+function invert(obj) {
+    const result = {};
+    
+    Object.entries(obj).forEach(([key, value]) => {
+        result[value] = key;
+    });
+
+    return result;
 }
 
-let car = new Car(0, "Lada");
-
-car.accelerate(20);
-console.log(car.status());
+console.log(invert({ a: 1, b: 2 }));
