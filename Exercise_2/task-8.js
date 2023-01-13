@@ -16,3 +16,5 @@ console.log(accumulatingArray([1, 2, 3, 4])); // [1, 3, 6, 10]
 // console.log(accumulatingArray([1, 5, 7])); // [1, 6, 13]
 // console.log(accumulatingArray([1, 0, 1, 0, 1])); // [1, 1, 2, 2, 3]
 // console.log(accumulatingArray([])); // []
+
+// arr[i] + newArray[i-1]

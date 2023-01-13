@@ -22,3 +22,6 @@ const teslaAdder = carsStorage.addModel("Tesla");
 teslaAdder(9);
 
 console.log(carsStorage.Tesla); // 9
+
+// создать объект carsStorage
+// использовать this

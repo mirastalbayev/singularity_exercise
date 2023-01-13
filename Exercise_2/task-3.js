@@ -2,15 +2,20 @@
 чтобы при вызове n раз она возвращала строку "edabit". */
 
 function lambdaDepth(n) {
-    return function() {
-        
+    if (n === ) {
+
     }
+
+    return n * lambdaDepth(n - 1);
 }
 
-lambdaDepth(0) // "edabit"
+console.log(lambdaDepth(0)); // "edabit"
 
-lambdaDepth(1)() // "edabit"
+// console.log(lambdaDepth(1)()); // "edabit"
 
-lambdaDepth(2)()() // "edabit"
+// console.log(lambdaDepth(2)()()); // "edabit"
 
-typeof lambdaDepth(2)() // "function"
+// console.log(typeof lambdaDepth(2)()); // "function"
+
+
+// использовать рекурсию
